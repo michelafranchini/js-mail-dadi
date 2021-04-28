@@ -9,14 +9,19 @@
 
 var player = Math.floor(Math.random() * 6 ) +1; 
 console.log("Il player ha il numero " + player);
+document.getElementById("player").innerHTML = "Il numero del player è: " + player; 
 
 var computer = Math.floor(Math.random() * 6 ) +1; 
 console.log("Il computer ha il numero " + computer);
+document.getElementById("computer").innerHTML = "Il numero del computer è: " + computer;
 
 if (player > computer) {
     console.log("Vince il player!");
+    document.getElementById("vincitore").innerHTML = "Vince il player!"; 
 } else if (computer > player) {
     console.log("Vince il computer!");
+    document.getElementById("vincitore").innerHTML = "Vince il computer!";
 } else {
     console.log("Pareggio!");
+    document.getElementById("vincitore").innerHTML = "Pareggio!";
 }
