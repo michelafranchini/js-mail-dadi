@@ -11,14 +11,21 @@ console.log(mailList);
 
 var mailUtente = prompt("Inserisci la tua email"); 
 
-// controllo email nella lista
+//controllo email nella lista
 
+var inLista = false;
 for (i = 0; i < mailList.length; i++) {
-    if (mailList[i].includes(mailUtente)) {
-        console.log("mail Ok");
-    } else {
-        console.log("non va bene");
+    if (mailList[i] == mailUtente) {
+        inLista = true;
+        document.getElementById("frase").innerHTML = "Ok puoi accedere!"; 
     }
+}
+
+if (inLista == true) {
+    console.log("mail Ok");
+} else {
+    console.log("non sei in lista");
+    document.getElementById("frase").innerHTML = "Ci dispiace ma la tua email non risulta nelle nostre liste!";
 }
 
 // stampa messaggio
