@@ -8,4 +8,15 @@
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 
 var player = Math.floor(Math.random() * 6 ) +1; 
-console.log();
+console.log("Il player ha il numero " + player);
+
+var computer = Math.floor(Math.random() * 6 ) +1; 
+console.log("Il computer ha il numero " + computer);
+
+if (player > computer) {
+    console.log("Vince il player!");
+} else if (computer > player) {
+    console.log("Vince il computer!");
+} else {
+    console.log("Pareggio!");
+}
